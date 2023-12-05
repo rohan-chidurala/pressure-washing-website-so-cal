@@ -1,0 +1,35 @@
+
+.navbar {
+    position: fixed; /* Set the position to fixed */
+    top: 0; /* Stick it to the top of the viewport */
+    width: 100%; /* Make it full-width */
+    background-color: #343a40;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 100; /* Add a high z-index to ensure it's on top of other content */
+  }
+  
+  .company-name {
+    font-weight: bold;
+    font-size: 24px;
+  }
+    
+  
+  .navbar-links {
+    display: flex;
+    /* additional styling as needed */
+  }
+  
+  .nav-button {
+    /* styles for nav buttons */
+    margin-right: 1rem; /* example */
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    /* more styling as needed */
+  }
+  

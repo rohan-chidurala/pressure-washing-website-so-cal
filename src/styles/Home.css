@@ -1,180 +1,78 @@
-/* Basic Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  /* Header */
-  .header {
-    background-color: #fff; /* Changed to white as per the example */
-    color: #333; /* Text color changed to dark for contrast */
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between; /* Aligns items to the space between */
-    align-items: center; /* Centers items vertically */
-  }
-  
-  .header h1 {
-    margin: 0;
-    font-weight: bold; /* Assuming the logo text is bold */
-  }
-  
-  .header button {
-    margin-right: 1rem;
-    background: none;
-    border: 1px solid #007bff; /* Blue border */
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .header button:last-child {
-    margin-right: 0;
-  }
-  
-  /* Search Section */
-  .search-section {
-    background-image: url('../assets/DALL·E\ 2023-12-04\ 17.02.13\ -\ A\ high-quality\ image\ representing\ a\ pressure\ washing\ business.\ The\ scene\ depicts\ a\ professional\ pressure\ washing\ service\ in\ action\,\ cleaning\ a\ residen.png'); /* Replace with your actual image path */
+.full-screen-background {
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
-    padding: 2rem;
-    position: relative;
-  }
-  
-  .search-box {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 2rem;
-    width: 100%;
-    max-width: 600px; /* Max width of the search box */
-    margin: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  
-  .search-box h2 {
-    color: #007bff; /* Blue text to match the button */
-  }
-  
-  .search-box input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border: 1px solid #ddd; /* Light gray border */
-  }
-  
-  .search-box button {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Services Section */
-  .services {
     display: flex;
-    justify-content: space-around; /* Space around the service cards */
-    background-color: #f8f9fa;
-    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-position: center bottom;
   }
   
-  .service-card {
-    text-align: center;
-    width: 30%; /* Each service card takes up 30% of the container width */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust as needed */
+    margin: auto;
+  }
+  
+  .description, .quote-form {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px; /* Add rounded corners */
+  }
+  
+/* Add these styles to your existing CSS */
+
+/* Add these styles to your existing CSS */
+
+/* Style the form container */
+.quote-form {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  /* Style the form header */
+  .quote-form h2 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   
-  .service-card img {
-    width: 100px; /* Fixed width for service images */
-    height: 100px; /* Fixed height for service images */
-    border-radius: 50%; /* Makes the images round */
-    object-fit: cover;
+  /* Style form input fields */
+  .quote-form input,
+  .quote-form textarea {
+    width: 100%;
+    padding: 0.5rem;
     margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  .service-card h3 {
-    margin-bottom: 1rem;
+  /* Style the textarea */
+  .quote-form textarea {
+    height: 100px; /* Adjust the height as needed */
   }
   
-  .service-card button {
+  /* Style the submit button */
+  .quote-form button {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth hover effect */
   }
   
-  /* Testimonials Section */
-  .testimonials {
-    padding: 2rem;
-    text-align: center;
-    background-color: #fff; /* White background for testimonials */
+  .quote-form button:hover {
+    background-color: #0056b3; /* Change color on hover */
   }
   
-  .testimonials h3 {
-    margin-bottom: 1rem;
-  }
-  
-  blockquote {
-    font-style: italic;
-    margin: 0.5rem auto;
-    padding: 1rem;
-    position: relative;
-    width: 80%;
-  }
-  
-  blockquote::before {
-    content: open-quote;
-  }
-  
-  blockquote::after {
-    content: close-quote;
-  }
-  
-  /* Contact Section */
-  .contact {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .contact h3 {
-    margin-bottom: 1rem;
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-    }
-  
-    .header button {
-      margin-bottom: 1rem;
-    }
-  
-    .search-box {
-      margin: 2rem auto; /* Centers the box */
-    }
-  
-    .services {
-      flex-direction: column;
-    }
-  
-    .service-card {
-      width: 100%; /* Full width on small screens */
-    }
-  }
+  /* Add more styling as needed */
   
